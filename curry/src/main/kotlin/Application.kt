@@ -1,4 +1,4 @@
-package com.example
+package com.micro
 
 import io.ktor.server.application.*
 
@@ -7,5 +7,10 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    configureFrameworks()
+    configureSerialization()
+    configureDatabases()
+    configureSecurity()
+    configureHTTP()
     configureRouting()
 }
